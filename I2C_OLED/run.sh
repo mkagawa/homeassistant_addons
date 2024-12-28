@@ -14,9 +14,10 @@ if ls /dev/i2c-$I2C_BUS; then
     bashio::log.info "/dev/i2c-$I2C_BUS enabled";
     bashio::log.info "I2C access enabled. Proceeding!";
     bashio::log.info "Display Info to OLED"
+    bashio::log.info "installing requests"
+    pip3 install requests
     bashio::log.info "Running 'python3 display.py $OPTIONS -c $CONFIG_PATH'"
     cd /I2C_OLED
-    pip3 install requests
     python3 display.py $OPTIONS -c $CONFIG_PATH
 else
     bashio::log.info "No /dev/i2c-$I2C_BUS Access!! Please read the instructions.";   
