@@ -11,7 +11,6 @@ RUN \
     py3-smbus
 
 RUN git clone -b v1.0.5a --single-branch --depth 1 https://github.com/mkagawa/rpi_i2c_oled.git /I2C_OLED
-RUN pip3 install requests
 
 COPY run.sh /
 WORKDIR /data
