@@ -7,6 +7,7 @@ RUN \
     git \
     python3 \
     py3-pip \
+    py3-requests \
     py3-pillow \
     py3-smbus
 
